@@ -32,10 +32,12 @@ public class Player : MonoBehaviour
     };
     int sequenceIndex = 0;
 
+    private Animator animator;
 
     // Start is called before the first frame update
     void Start()
     {
+        animator = GetComponent<Animator>();
         myRigidbody = gameObject.GetComponent<Rigidbody2D>();
         groundHeight = transform.position.y;
         jumping = false;
@@ -54,6 +56,7 @@ public class Player : MonoBehaviour
         if(transform.position.y > groundHeight)
         {
             jumping = true;
+            
         }
         else
         {
@@ -75,6 +78,8 @@ public class Player : MonoBehaviour
                 jumpInitiated = false;
             }
         }
+
+        animator.SetBool("Jumping", jumping);
     }
 
 
