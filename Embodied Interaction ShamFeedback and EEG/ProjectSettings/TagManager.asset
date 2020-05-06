@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - inputWindow
+  - bounce
+  - slow
   layers:
   - Default
   - TransparentFX
@@ -38,6 +41,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: background
+    uniqueID: 2387545859
+    locked: 0
+  - name: evilguy
+    uniqueID: 802383711
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
